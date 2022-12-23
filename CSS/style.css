@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap;500&family=Inspiration&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+.myLogo{
+  background-image: url("../IMG/logoZinzins.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 4em;
+  width: 4em;
+  border: 2px solid white;
+}
+.myGradient{
+  background: linear-gradient(90deg, orange 1%,black 10%);  
+  color:red;
+}
+.myActive{
+  border:1px solid rgba(248, 185, 50, 0.74);
+  border-radius: 9%;
+}
+.myH1{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 4em;
+}

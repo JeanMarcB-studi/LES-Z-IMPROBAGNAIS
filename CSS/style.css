@@ -6,7 +6,7 @@
   background-repeat: no-repeat;
   height: 4em;
   width: 4em;
-  border: 2px solid white;
+  border: 2px solid orange;
 }
 .myGradient{
   background: linear-gradient(90deg, orange 1%,black 10%);  
@@ -18,5 +18,18 @@
 }
 .myH1{
   font-family: 'Shadows Into Light Two', cursive;
-  font-size: 4em;
+  font-size: 7VW;
+}
+
+/* If the screen size is 1200px wide or more, set the font-size to 80px */
+@media (min-width: 1200px) {
+  .responsive-font-example {
+    font-size: 80px;
+  }
+}
+/* If the screen size is smaller than 1200px, set the font-size to 80px */
+@media (max-width: 1199.98px) {
+  .responsive-font-example {
+    font-size: 30px;
+  }
 }

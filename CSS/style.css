@@ -22,12 +22,12 @@
     background-image: url("../IMG/logoZinzins.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
-    height: 50px;
+    height: 60px;
     width: 60px;
     border: 2px solid orange;
   }
   .myVertical{
-    top:-7px;
+    top:10px;
     left:10px;
     color:white;
   }

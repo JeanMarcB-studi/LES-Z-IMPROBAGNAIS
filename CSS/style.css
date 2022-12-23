@@ -16,9 +16,63 @@
   border:1px solid rgba(248, 185, 50, 0.74);
   border-radius: 9%;
 }
-.myH1{
-  font-family: 'Shadows Into Light Two', cursive;
-  font-size: 7VW;
+
+@media (min-width: 1px){
+  .myLogo{
+    background-image: url("../IMG/logoZinzins.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 60px;
+    border: 2px solid orange;
+  }
+  .myVertical{
+    top:-7px;
+    left:10px;
+    color:white;
+  }
+  .myH1{
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 7VW;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+}
+
+@media (min-width: 350px){
+  .myLogo{
+    background-image: url("../IMG/logoZinzins.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 4em;
+    width: 4em;
+    border: 2px solid orange;
+  }
+  .myVertical{
+    bottom:200px;
+    left:10px;
+    color:white;
+  }
+  .myH1{
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 7VW;
+    word-wrap: normal;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 850px){
+  .myVertical{
+    bottom:-200px;
+    left:10px;
+    color:white;
+  }
+  .myH1{
+    font-family: 'Shadows Into Light Two', cursive;
+    font-size: 7VW;
+    word-wrap: normal;
+    white-space: nowrap;
+  }
 }
 
 /* If the screen size is 1200px wide or more, set the font-size to 80px */

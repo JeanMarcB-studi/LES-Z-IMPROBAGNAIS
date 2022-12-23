@@ -27,13 +27,13 @@
     border: 2px solid orange;
   }
   .myVertical{
-    top:10px;
+    top:17%;
     left:10px;
     color:white;
   }
   .myH1{
     font-family: 'Shadows Into Light Two', cursive;
-    font-size: 7VW;
+    font-size: 9VW;
     word-wrap: break-word;
     white-space: normal;
   }

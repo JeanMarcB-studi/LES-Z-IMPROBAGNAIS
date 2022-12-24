@@ -17,6 +17,17 @@
   border-radius: 9%;
 }
 
+.VIGNETTE{
+  max-width: 300px;
+}
+.INNER-IMG {
+  transition: 0.3s;
+}
+.INNER-IMG:hover {
+  transform: scale(1.1);
+}
+
+
 @media (min-width: 1px){
   .myLogo{
     background-image: url("../IMG/logoZinzins.jpg");
@@ -37,6 +48,9 @@
     word-wrap: break-word;
     white-space: normal;
   }
+  .myWidth{
+    max-width: 95%;
+  }
 }
 
 @media (min-width: 350px){
@@ -54,9 +68,16 @@
     word-wrap: normal;
     white-space: nowrap;
   }
+  .myWidth{
+    max-width: 85%;
+  }
 }
 
 @media (min-width: 850px){
+  .myLogo{
+    height: 5em;
+    width: 5em;
+  }
   .myVertical{
     bottom:9%;
     left:15px;
@@ -64,5 +85,8 @@
   }
   .myH1{
     font-size: 7VW;
+  }
+  .myWidth{
+    max-width: 45%;
   }
 }

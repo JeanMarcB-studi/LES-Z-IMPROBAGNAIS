@@ -17,6 +17,10 @@
   border-radius: 9%;
 }
 
+.myYellow{
+  color: rgb(223, 223, 132);
+}
+
 .VIGNETTE{
   max-width: 300px;
 }

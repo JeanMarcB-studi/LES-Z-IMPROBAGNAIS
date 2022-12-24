@@ -27,7 +27,7 @@
     border: 2px solid orange;
   }
   .myVertical{
-    top:17%;
+    bottom: 10%; 
     left:10px;
     color:white;
   }
@@ -41,20 +41,15 @@
 
 @media (min-width: 350px){
   .myLogo{
-    background-image: url("../IMG/logoZinzins.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
     height: 4em;
     width: 4em;
-    border: 2px solid orange;
   }
   .myVertical{
-    bottom:200px;
+    bottom:9%;
     left:10px;
     color:white;
   }
   .myH1{
-    font-family: 'Shadows Into Light Two', cursive;
     font-size: 7VW;
     word-wrap: normal;
     white-space: nowrap;
@@ -63,27 +58,11 @@
 
 @media (min-width: 850px){
   .myVertical{
-    bottom:-200px;
-    left:10px;
+    bottom:9%;
+    left:15px;
     color:white;
   }
   .myH1{
-    font-family: 'Shadows Into Light Two', cursive;
     font-size: 7VW;
-    word-wrap: normal;
-    white-space: nowrap;
-  }
-}
-
-/* If the screen size is 1200px wide or more, set the font-size to 80px */
-@media (min-width: 1200px) {
-  .responsive-font-example {
-    font-size: 80px;
-  }
-}
-/* If the screen size is smaller than 1200px, set the font-size to 80px */
-@media (max-width: 1199.98px) {
-  .responsive-font-example {
-    font-size: 30px;
   }
 }

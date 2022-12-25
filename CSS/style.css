@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap;500&family=Inspiration&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Qwitcher+Grypen:wght@400;700&display=swap');
 
-.myLogo{
-  background-image: url("../IMG/logoZinzins.jpg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  height: 4em;
-  width: 4em;
-  border: 2px solid orange;
-}
 .myGradient{
   background: linear-gradient(90deg, orange 1%,black 10%);  
   color:red;
@@ -21,7 +13,7 @@
   color: rgb(223, 223, 132);
 }
 
-.VIGNETTE{
+.myStickers{
   max-width: 300px;
 }
 .INNER-IMG {
@@ -32,36 +24,36 @@
 }
 
 
-@media (min-width: 1px){
-  .myLogo{
-    background-image: url("../IMG/logoZinzins.jpg");
+/* RESPONSIVITE : VALEURS DE BASE JUSQU'A 349px DE LARGE */
+.myLogo{
+  background-image: url("../IMG/logoZinzins.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
     height: 60px;
     width: 60px;
     border: 2px solid orange;
-  }
-  .myVertical{
-    bottom: 10%; 
-    left:10px;
-    color:white;
-  }
-  .myH1{
-    font-family: 'Shadows Into Light Two', cursive;
-    font-size: 9VW;
-    word-wrap: break-word;
-    white-space: normal;
-  }
-  .myWidth{
-    max-width: 95%;
-  }
+}
+.myVertical{
+  bottom: 10%; 
+  left:10px;
+  color:white;
+}
+.myH1{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 9VW;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.myWidth{
+  max-width: 95%;
 }
 
+/* RESPONSIVITE : VALEURS DE 350px JUSQU'A 849px DE LARGE */
 @media (min-width: 350px){
   .myLogo{
-    height: 4em;
-    width: 4em;
-  }
+  height: 4em;
+  width: 4em;
+}
   .myVertical{
     bottom:9%;
     left:10px;
@@ -77,6 +69,7 @@
   }
 }
 
+/* RESPONSIVITE : VALEURS SUPERIEURES OU EGALES A 850px*/
 @media (min-width: 850px){
   .myLogo{
     height: 5em;

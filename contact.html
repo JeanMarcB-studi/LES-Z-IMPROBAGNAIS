@@ -9,28 +9,26 @@
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
   <!-- myCSS -->
   <link rel="stylesheet" href="CSS/style.css">
-  <!-- controls on form -->
-  <script src="JVS/form.js"></script>
   
   <title>les Z'improbagnais</title>
 </head>
-  
-<body class="bd-gray-700">
 
-<!-- ---------------------- H  E  A  D  E  R ---------------------- -->
-<div class="container-fluid p-0 position-relative">
-  <!-- HEADER IMAGE ON STAGE -->
-  <div class="row">
-    <img class="img-fluid mx-0 " src="IMG/PhotoHead.JPG" alt="???" srcset=""> 
-  </div>
+<body class="bd-gray-700">
   
-  <!-- LOGO & TITLE -->
-  <div class="row myVertical position-absolute g-3 align-items-center">
-    <!-- LOGO  -->
-    <div class="col-3">
-      <div
-      class="img rounded-circle myLogo m-auto p-0">
+  <!-- ---------------------- H  E  A  D  E  R ---------------------- -->
+  <div class="container-fluid p-0 position-relative">
+    <!-- HEADER IMAGE ON STAGE -->
+    <div class="row">
+      <img class="img-fluid mx-0 " src="IMG/PhotoHead.JPG" alt="???" srcset=""> 
     </div>
+    
+    <!-- LOGO & TITLE -->
+    <div class="row myVertical position-absolute g-3 align-items-center">
+      <!-- LOGO  -->
+      <div class="col-3">
+        <div
+        class="img rounded-circle myLogo m-auto p-0">
+      </div>
     </div>
   
     <!-- TITLE  -->
@@ -81,88 +79,90 @@
 </div>
 <!-- ---------------------- END  H  E  A  D  E  R ----------------- -->
 
-  <!-- TEXTE PRESENTATION -->
-  <div class="container-md w-75 my-0">
-    <h2>Chers ZINZINS :</h2>
-    <div class="h4 myYellow">
-      Cette page-ci reste à construire mais il me tarde d'avoir votre avis sur tout le reste, vos idées, suggestions et surtout... <br>
-      de vous retrouver toutes et tous en pleine forme !
-    </div>
+<!-- TEXTE PRESENTATION -->
+<div class="container-md w-75 my-0">
+  <h2>Chers ZINZINS :</h2>
+  <div class="h4 myYellow">
+    Cette page-ci reste à construire mais il me tarde d'avoir votre avis sur tout le reste, vos idées, suggestions et surtout... <br>
+    de vous retrouver toutes et tous en pleine forme !
   </div>
-  
-  
- <!-- AFFICHE DU 16 DEC 2022 -->
- <div class="container-md my-5 w-75">
+</div>
+
+
+<!-- AFFICHE DU 16 DEC 2022 -->
+<div class="container-md my-5 w-75">
   <h2></h2>
   <h3 class="text-center">A VOUS TOUS UN JOYEUX NOEL ...</h3>
-<div class="container-lg my-4 ">
-  <img src="IMG/Joyeux Noel2.jpg" alt="" class ="w-100" srcset="">
-</div>
-<h3 class="text-center">... ET UNE MERVEILLEUSE ANNEE !</h3>
-Gros bisous<br>Jean-Marc
+  <div class="container-lg my-4 ">
+    <img src="IMG/Joyeux Noel2.jpg" alt="" class ="w-100" srcset="">
+  </div>
+  <h3 class="text-center">... ET UNE MERVEILLEUSE ANNEE !</h3>
+  Gros bisous<br>Jean-Marc
 </div>
 
 <!-- PRESENT-->
 <div class="container-md myWidth my-0">
   <div class="bg-gradient p-3 rounded-2">
-    Cher visiteur, <br> une question, une idée, une remarque ou bien une proposition de spectacle : <br> si vous souhaitez nous contacter, ce formulaire est à votre disposition !
+    Cher visiteur, <br> une question, une idée, une remarque ou bien une proposition de spectacle ? <br> Si vous souhaitez nous contacter, ce formulaire est à votre disposition !
   </div>
-  <h2>Pour nous contacter :</h2>
+  <h2 class="myYellow text-center">Pour nous contacter :</h2>
 </div>
 
 <!-- ----------------- FORMULAIRE DE CONTACT---------------- -->
 
 <div class="container d-flex flex-column min-vh-75 justify-content-center align-items-center bd-gray-800 mx-auto my-3 border rounded-1">
-
+  
   <form class="row g-3 needs-validation" id="contactForm" novalidate>
-
-      <div class="col-md-6">
-          <label for="firstname" class="form-label">Prénom :</label>
-          <input type="text" class="form-control" name="firstName" id="firstName" label="firstname" placeholder="votre Prénom ?">
-          <div class="invalid-feedback">
-              Veuillez saisir votre prénom.
-          </div>
+    
+    <div class="col-md-6">
+      <label for="firstname" class="form-label">Prénom :</label>
+      <input type="text" class="form-control" name="firstName" id="firstName" label="firstname" placeholder="votre Prénom ?">
+      <div class="invalid-feedback">
+        Veuillez saisir votre prénom.
       </div>
+    </div>
+    
+    <div class="col-md-6">
+      <label for="lastname" class="form-label">Nom :</label>
+      <input type="text" class="form-control" name="lastName" id="lastName" label="name" placeholder="votre Nom ?">
+      <div class="invalid-feedback">
+        Veuillez saisir votre nom.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">E-mail :</label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="votre Email ?">
+      <div class="invalid-feedback">
+        Veuillez saisir votre e-mail.
+      </div>
+    </div>
+    <div class="col-md-6">
+      <label for="phoneNumber" class="form-label">Téléphone :</label>
+      <input type="email" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="votre No de téléphone ?">
+      <div class="invalid-feedback">
+        Veuillez saisir votre numéro de téléphone.
+      </div>
+    </div>
+    
+    <!-- Message input -->
+    <div class="form-outline mb-1">
+      <label for="phoneNumber" class="form-label">Votre message :</label>
+      <textarea class="form-control py-0 lh-1" id="message" rows="6" placeholder="votre message ici..."></textarea>
       
-      <div class="col-md-6">
-          <label for="lastname" class="form-label">Nom :</label>
-          <input type="text" class="form-control" name="lastName" id="lastName" label="name" placeholder="votre Nom ?">
-          <div class="invalid-feedback">
-              Veuillez saisir votre nom.
-          </div>
-      </div>
-      <div class="col-md-6">
-          <label for="email" class="form-label">E-mail :</label>
-          <input type="email" class="form-control" name="email" id="email" placeholder="votre Email ?">
-          <div class="invalid-feedback">
-              Veuillez saisir votre e-mail.
-          </div>
-      </div>
-      <div class="col-md-6">
-          <label for="phoneNumber" class="form-label">Téléphone :</label>
-          <input type="email" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="votre No de téléphone ?">
-          <div class="invalid-feedback">
-              Veuillez saisir votre numéro de téléphone.
-          </div>
-      </div>
-
-      <!-- Message input -->
-      <div class="form-outline mb-1">
-        <label for="phoneNumber" class="form-label">Votre message :</label>
-        <textarea class="form-control py-0 lh-1" id="message" rows="6" placeholder="votre message ici..."></textarea>
-      
-      </div>
-
-      <button type="submit" class="btn btn-bd-accent w-25 mb-3 ms-2">Envoyer</button>
+    </div>
+    
+    <button type="submit" class="btn btn-bd-accent w-25 mb-3 ms-2">Envoyer</button>
   </form>
 </div>
 
 
 
+<!-- controls on form -->
+<script src="JVS/form.js"></script>
 
-  <!-- ........................ THIS IS THE END :o) ............................... -->
-  <!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
+<!-- ........................ THIS IS THE END :o) ............................... -->
+<!-- bootstrap -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+
 </body>
 </html>

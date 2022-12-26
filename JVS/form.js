@@ -15,7 +15,7 @@
 
                 //si la validation de ce champ retourne false
                 if (!validateFields(input)) {
-                    alert('1')
+                    // alert('1')
                     event.preventDefault();
                     event.stopPropagation();
                     
@@ -28,7 +28,7 @@
                 } 
                 //si donnée dans le champ est valide 
                 else {
-                    alert('3')
+                    // alert('3')
                     //re-cacher l'elt HTML suivant qui contient msg erreur
                     input.nextElementSibling.style.display = 'none';
                     input.classList.remove("is-invalid");

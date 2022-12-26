@@ -1,4 +1,16 @@
+/* FONT OF THE TITLE */
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap;500&family=Inspiration&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Qwitcher+Grypen:wght@400;700&display=swap');
+
+/* ANIMATION */
+
+@keyframes Turn{
+  0% {transform : rotate(0)}
+  100%{transform : rotate(360)}
+}
+.turningLogo{
+  animation: 0.8s ease-in 2s infinite alternate Turn;
+}
+
 
 .myActive{
   border:1px solid rgba(248, 185, 50, 0.74);
@@ -30,6 +42,7 @@
     height: 60px;
     width: 60px;
     border: 2px solid orange;
+
 }
 .myVertical{
   bottom: 10%; 
@@ -45,13 +58,16 @@
 .myWidth{
   max-width: 95%;
 }
+.myWidthSmall{
+  max-width: 90%;
+}
 
 /* RESPONSIVITY : WIDTH VALUES from 350px to 849px LARGE */
 @media (min-width: 350px){
   .myLogo{
-  height: 4em;
-  width: 4em;
-}
+    height: 4em;
+    width: 4em;
+  }
   .myVertical{
     bottom:9%;
     left:10px;
@@ -64,6 +80,9 @@
   }
   .myWidth{
     max-width: 85%;
+  }
+  .myWidthSmall{
+    max-width: 75%;
   }
 }
 
@@ -82,6 +101,9 @@
     font-size: 7VW;
   }
   .myWidth{
-    max-width: 45%;
+    max-width: 650px;
+  }
+  .myWidthSmall{
+    max-width: 500px;
   }
 }

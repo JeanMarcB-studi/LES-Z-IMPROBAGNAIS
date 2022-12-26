@@ -9,6 +9,8 @@
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
   <!-- myCSS -->
   <link rel="stylesheet" href="CSS/style.css">
+  <!-- controls on form -->
+  <script src="JVS/form.js"></script>
   
   <title>les Z'improbagnais</title>
 </head>
@@ -55,13 +57,13 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <!-- ITEM 1 -->
           <li class="nav-item">
-            <a class="nav-link" id="Accueil" href="index.html">
+            <a class="nav-link p-2" id="Accueil" href="index.html">
               Accueil
             </a>
           </li>
           <!-- ITEM 2 -->
           <li class="nav-item">
-            <a class="nav-link" id="Spectacle" href="spectacles.html">
+            <a class="nav-link p-2" id="Spectacle" href="spectacles.html">
               Spectacles
             </a>
           </li>
@@ -96,8 +98,63 @@
 <div class="container-lg my-4 ">
   <img src="IMG/Joyeux Noel2.jpg" alt="" class ="w-100" srcset="">
 </div>
-<h3 class="text-center">ET UNE MERVEILLEUSE ANNEE !</h3>
+<h3 class="text-center">... ET UNE MERVEILLEUSE ANNEE !</h3>
 Gros bisous<br>Jean-Marc
+</div>
+
+<!-- PRESENT-->
+<div class="container-md myWidth my-0">
+  <div class="bg-gradient p-3 rounded-2">
+    Cher visiteur, <br> une question, une idée, une remarque ou bien une proposition de spectacle : <br> si vous souhaitez nous contacter, ce formulaire est à votre disposition !
+  </div>
+  <h2>Pour nous contacter :</h2>
+</div>
+
+<!-- ----------------- FORMULAIRE DE CONTACT---------------- -->
+
+<div class="container d-flex flex-column min-vh-75 justify-content-center align-items-center bd-gray-800 mx-auto my-3 border rounded-1">
+
+  <form class="row g-3 needs-validation" id="contactForm" novalidate>
+
+      <div class="col-md-6">
+          <label for="firstname" class="form-label">Prénom :</label>
+          <input type="text" class="form-control" name="firstName" id="firstName" label="firstname" placeholder="votre Prénom ?">
+          <div class="invalid-feedback">
+              Veuillez saisir votre prénom.
+          </div>
+      </div>
+      
+      <div class="col-md-6">
+          <label for="lastname" class="form-label">Nom :</label>
+          <input type="text" class="form-control" name="lastName" id="lastName" label="name" placeholder="votre Nom ?">
+          <div class="invalid-feedback">
+              Veuillez saisir votre nom.
+          </div>
+      </div>
+      <div class="col-md-6">
+          <label for="email" class="form-label">E-mail :</label>
+          <input type="email" class="form-control" name="email" id="email" placeholder="votre Email ?">
+          <div class="invalid-feedback">
+              Veuillez saisir votre e-mail.
+          </div>
+      </div>
+      <div class="col-md-6">
+          <label for="phoneNumber" class="form-label">Téléphone :</label>
+          <input type="email" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="votre No de téléphone ?">
+          <div class="invalid-feedback">
+              Veuillez saisir votre numéro de téléphone.
+          </div>
+      </div>
+
+      <!-- Message input -->
+      <div class="form-outline mb-1">
+        <label for="phoneNumber" class="form-label">Votre message :</label>
+        <textarea class="form-control py-0 lh-1" id="message" rows="6" placeholder="votre message ici..."></textarea>
+      
+      </div>
+
+      <button type="submit" class="btn btn-bd-accent w-25 mb-3 ms-2">Envoyer</button>
+  </form>
 </div>
 
 

@@ -1,12 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap;500&family=Inspiration&family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=Qwitcher+Grypen:wght@400;700&display=swap');
 
-.myGradient{
-  background: linear-gradient(90deg, orange 1%,black 10%);  
-  color:red;
-}
 .myActive{
   border:1px solid rgba(248, 185, 50, 0.74);
   border-radius: 9%;
+  color: white;
+  background-color: rgb(80, 80, 80);
 }
 
 .myYellow{
@@ -24,7 +22,7 @@
 }
 
 
-/* RESPONSIVITE : VALEURS DE BASE JUSQU'A 349px DE LARGE */
+/* RESPONSIVITY : WIDTH VALUES INFERIOR 350px LARGE */
 .myLogo{
   background-image: url("../IMG/logoZinzins.jpg");
     background-size: 100%;
@@ -48,7 +46,7 @@
   max-width: 95%;
 }
 
-/* RESPONSIVITE : VALEURS DE 350px JUSQU'A 849px DE LARGE */
+/* RESPONSIVITY : WIDTH VALUES from 350px to 849px LARGE */
 @media (min-width: 350px){
   .myLogo{
   height: 4em;
@@ -69,7 +67,7 @@
   }
 }
 
-/* RESPONSIVITE : VALEURS SUPERIEURES OU EGALES A 850px*/
+/* RESPONSIVITY : WIDTH VALUES MORE THAN 850px LARGE*/
 @media (min-width: 850px){
   .myLogo{
     height: 5em;

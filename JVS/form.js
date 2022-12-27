@@ -1,3 +1,8 @@
+const domain = "gmail.com";
+// const zinzin = "zimprobagnais";
+const zinzin = "janmarc.boutaud"
+const sep = "@";
+
 
 //=== START - FORM DECLARE ===//    
 
@@ -6,36 +11,54 @@
 
     //quand submit sera cliqué
     form.addEventListener('submit', function(event) {
-    // console.log("start CONTROLS");
-        // stocker + scanner chaque elt du formulaire 
-        let tt=Array.from(form.elements).forEach((input) => {
-            
-            //on ne checke pas l'element bouton  
-            if (input.type !== "submit") {
+        
+        // init variables for mail
+        console.log("start CONTROLS");
+        const CR = "\n";
+        const myDate = new Date();
+        let message ="Message du site WEB Les Z'IMPROBAGNAIS" + CR;
+        message += "envoyé le "+ myDate.toLocaleString('fr-FR') + CR + CR;
+        
+        // store + scan each data from the Form 
+        let tt=Array.from(form.elements).forEach((input) => {            
+             
+            if (input.type !== "submit") { //on ne checke pas bouton 
 
-                //si la validation de ce champ retourne false
+                console.log("=================");
+                console.log("CHECK " + input.name);
+
+
+                //if invalid entry (return was false)
                 if (!validateFields(input)) {
-                    // alert('1')
+                    console.log(' PB !');
                     event.preventDefault();
                     event.stopPropagation();
                     
                     input.classList.remove("is-valid");
 
-                    //faire afficher que le champ est valide
+                    //put invalid class
                     input.classList.add("is-invalid");
-                    //afficher l'elt HTML suivant qui contient un msg erreur
+                    //show error msg
                     input.nextElementSibling.style.display = 'block';
                 } 
-                //si donnée dans le champ est valide 
+                //if data is valid (return was true) 
                 else {
-                    // alert('3')
-                    //re-cacher l'elt HTML suivant qui contient msg erreur
+                    // prepare data for email content ----------------
+                    console.log (' OK ');
+                    message += input.name +" : " + CR ;
+                    message += removeTags(input.value)  + CR + CR ;
+
+                    //hide error msg 
                     input.nextElementSibling.style.display = 'none';
                     input.classList.remove("is-invalid");
                     input.classList.add("is-valid");
                 }
             }
         });
+        // if OK, send msg
+        console.log ("Tous tests ok !");        
+        sendMail(domain, sep, zinzin, message)
+
     }, false)
 })()
 
@@ -83,6 +106,10 @@ function validateFields(input) {
         )
     }
     
+    case "message" :{
+        return(true)
+    }
+
     // case "address" :{
     //     return (
     //         validateRequired(input)
@@ -119,7 +146,7 @@ function checkFormat(input, regex){
 // Validation d'un champ REQUIRED
 function validateRequired(input) {
     console.log("test de "+input.name)
-    console.log("validate required = " + !(input.value == null || input.value == ""))
+    console.log("validate required non vide = " + !(input.value == null || input.value == ""))
     return !(input.value == null || input.value == "");
 }
 
@@ -161,3 +188,28 @@ function validatePhoneNumber(input) {
 function validateTerms(input) {
     return input.checked;
 }
+
+function removeTags(str) {
+    if ((str===null) || (str===''))
+        return false;
+    else {
+        str = str.toString();
+        // Regular expression to identify HTML tags in 
+        // the input string. Replacing the identified 
+        // HTML tag with a null string.
+        return str.replace( /(<([^>]+)>)/ig, '');
+    }
+}
+
+
+// ----- FUNCTION SEND A MAIL -----
+function sendMail(myDomain, mySep, myZinzin, myMsg){
+    console.log("SEND EMAIL")
+    console.log (myMsg)
+
+    
+}
+
+
+
+//> var name = "dupont" ; var domain = "spam.com" ; var subject = "subject=Anti spam" ; document.write('<a href="mailto:' + name + '@' + domain + ' ?' + subject + '">') ; document.write(name + '@' + domain + 

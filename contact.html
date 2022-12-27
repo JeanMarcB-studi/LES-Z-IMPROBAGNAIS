@@ -129,6 +129,7 @@
         Veuillez saisir votre nom.
       </div>
     </div>
+
     <div class="col-md-6">
       <label for="email" class="form-label">E-mail :</label>
       <input type="email" class="form-control" name="email" id="email" placeholder="votre Email ?">
@@ -136,6 +137,7 @@
         Veuillez saisir votre e-mail.
       </div>
     </div>
+    
     <div class="col-md-6">
       <label for="phoneNumber" class="form-label">Téléphone :</label>
       <input type="email" class="form-control" name="phoneNumber" id="phoneNumber" placeholder="votre No de téléphone ?">
@@ -146,8 +148,11 @@
     
     <!-- Message input -->
     <div class="form-outline mb-1">
-      <label for="phoneNumber" class="form-label">Votre message :</label>
-      <textarea class="form-control py-0 lh-1" id="message" rows="6" placeholder="votre message ici..."></textarea>
+      <label for="message" class="form-label">Votre message :</label>
+      <textarea class="form-control py-0 lh-1" id="message" name="message" rows="6" placeholder="votre message ici..."></textarea>
+      <div class="invalid-feedback">
+        Veuillez saisir un message.
+      </div>
       
     </div>
     

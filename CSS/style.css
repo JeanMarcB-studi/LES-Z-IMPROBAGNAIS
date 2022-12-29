@@ -4,11 +4,19 @@
 /* ANIMATION */
 
 @keyframes Turn{
-  0% {transform : rotate(0)}
-  100%{transform : rotate(360)}
+  /* 0% {transform : rotate(1deg)}; */
+  100% {transform : rotate(360deg)};
 }
 .turningLogo{
-  animation: 0.8s ease-in 2s infinite alternate Turn;
+  /* transform : rotate(-180deg); */
+  animation: 2s ease-in 1s 1  Turn;
+}
+
+.toto{
+  border: 1px solid red;
+  display: block;
+  width: 30px;
+  height: 30px;
 }
 
 

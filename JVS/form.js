@@ -1,8 +1,8 @@
+// NECESSARY DATA FOR EMAIL WITH SPLIT FOR SECURITY
 const myDomain = "gmail.com";
 const myZinzin = "zimprobagnais"
 const mySep = "@";
-
-console.log("Hello World");
+const CR = "%0D%0A"; // CR LF
 
 
 //=== START - FORM DECLARE ===//    
@@ -15,24 +15,23 @@ console.log("Hello World");
     btonSend.addEventListener('click', function(event) {
         
         // init variables for mail
-        console.log("start CONTROLS");
+        console.clear()
+        console.log("start CONTROLS...");
         let allOK = true;
-        const CR = "  ;  ";
         const myDate = new Date();
-        let message = "date : "+ myDate.toLocaleString('fr-FR') + CR;
+        let message = "Date du message : "+ myDate.toLocaleString('fr-FR') + CR + CR;
         
         // store + scan each data from the Form 
         let tt=Array.from(form.elements).forEach((input) => {            
              
-            if (input.type !== "button") { //on ne checke pas bouton 
+            if (input.type !== "button") { //check every item except the button 
 
                 console.log("=================");
                 console.log("CHECK " + input.name);
 
-
                 //if invalid entry (return was false)
                 if (!validateFields(input)) {
-                    console.log(' PB !');
+                    console.log('test ERR !');
                     allOK = false;
                     //event.preventDefault();
                     //event.stopPropagation();
@@ -47,9 +46,9 @@ console.log("Hello World");
                 //if data is valid (return was true) 
                 else {
                     // prepare data for email content ----------------
-                    console.log (' OK ');
+                    console.log ('test OK ');
                     message += input.name +" : " 
-                    message += removeTags(input.value)  + CR;
+                    message += removeTags(input.value)  + CR + CR;
 
                     //hide error msg 
                     input.nextElementSibling.style.display = 'none';
@@ -60,7 +59,7 @@ console.log("Hello World");
         });
         // if OK, send msg
         if (allOK) {
-            console.log ("Tous tests ok !");        
+            console.log ("All data are ok for a mail!");        
             sendMail(myDomain, mySep, myZinzin, message)
         }
 
@@ -111,90 +110,83 @@ function validateFields(input) {
     case "message" :{
         return (
             validateRequired(input)
-            //longueur champ ok ?     
+            //length ok ?     
             && validateLength(input, 2, 500)
             )
     }
-
+    // ...... NOT USED, BUT I LEAVE IT FOR MY FUTURE ENHANCEMENTS........
     // case "address" :{
-    //     return (
-    //         validateRequired(input)
-    //         && validateAddress(input)
-    //     )
-    // }
-    
-    // case "city" :{
-    //     return (
-    //         validateRequired(input)
-    //         )
-    //     }
-        
-    // case "postCode" :{
-    //     return (
-    //         validateRequired(input)
-    //         && validatePostCode(input)
-    //         )
-    //     }
-        
+        //     return (
+            //         validateRequired(input)
+            //         && validateAddress(input)
+            //     )
+            // }    
+            // case "city" :{
+                //     return (
+                    //         validateRequired(input)
+                    //         )
+                    //     }        
+                    // case "postCode" :{
+                        //     return (
+                            //         validateRequired(input)
+                            //         && validatePostCode(input)
+                            //         )
+    //     }        
     // case "conditions" :{
-    //     return (
-    //         input
-    //         )
-    //     }
+        //     return (
+            //         input
+            //         )
+            //     }
+        }
     }
-}
-//=== END - FIELDS VALIDATION  ===//
-
-function checkFormat(input, regex){
-    return input.value.match(regex);
-}
-
-// Validation d'un champ REQUIRED
-function validateRequired(input) {
-    console.log("test de "+input.name)
+    //=== END - FIELDS VALIDATION  ===//
+    
+    // Checking Regex values
+    function checkFormat(input, regex){
+        return input.value.match(regex);
+    }
+    
+    // Validate if field is REQUIRED
+    function validateRequired(input) {
     console.log("validate required non vide = " + !(input.value == null || input.value == ""))
     return !(input.value == null || input.value == "");
 }
 
-// Validation du nombre de caractéres : MIN & MAX
+// Validation number of chars : MIN & MAX
 function validateLength(input, minLength, maxLength) {
     return !(input.value.length < minLength || input.value.length > maxLength);
 }
 
-// Validation des caractères : LATIN & LETTRES
-function validateText(input) {
-    return input.value.match("^[A-Za-z]+$");
-}
-
-// Validation d'un e-mail
+// Validate an e-mail
 function validateEmail(input) {
     let EMAIL = input.value;
     let POSAT = EMAIL.indexOf("@");
     let POSDOT = EMAIL.lastIndexOf(".");
-
+    
     return !(POSAT < 1 || (POSDOT - POSAT < 2));
 }
 
-// Validation Code Postal
-function validatePostCode(input) {
-    return input.value.match("^(0[1-9]|[1-9][0-9])[0-9][0-9][0-9]$");
-}
-
-// Validation Adresse
-function validateAddress(input) {
-    return input.value.match(/^\s*\S+(?:\s+\S+){2}/);
-}
-
-// Validation du Numéro de téléphone
+// Validate one Phone number
 function validatePhoneNumber(input) {
     return input.value.match(/^(?:(?:\+|00)33|0)\s*[1-9](?:[\s.-]*\d{2}){4}$/);
 }
 
-// Validation d'un checkbox
-function validateTerms(input) {
-    return input.checked;
-}
 
+// ...... NOT USED, BUT I LEAVE IT FOR MY FUTURE ENHANCEMENTS........
+// Validation Address
+// function validateAddress(input) {
+//     return input.value.match(/^\s*\S+(?:\s+\S+){2}/);
+// }
+// Validation Postal code
+// function validatePostCode(input) {
+//     return input.value.match("^(0[1-9]|[1-9][0-9])[0-9][0-9][0-9]$");
+// }
+// Validation checkbox
+// function validateTerms(input) {
+//     return input.checked;
+// }
+
+// for blocking html injections
 function removeTags(str) {
     if ((str===null) || (str===''))
         return false;
@@ -207,17 +199,13 @@ function removeTags(str) {
     }
 }
 
-
 // ----- FUNCTION SEND A MAIL -----
 function sendMail(domain, sep, zinzin, myMsg){
-    console.log("SEND EMAIL")
-    console.log(zinzin)
-    console.log (myMsg)
+    console.log("PREPARE TO SEND EMAIL")
 
     let btonSend = document.createElement("a")
     const mel = zinzin+sep+domain
-    console.log("mel: "+mel)
-    // btonSend.enctype = "multipart/form-data"
+    console.log("mail: "+mel)
     btonSend.href = "mailto:" + mel + "?subject=Message depuis le site les ZIMPROBAGNAIS" + "&body=" + myMsg 
     btonSend.click()
 }

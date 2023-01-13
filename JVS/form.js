@@ -1,28 +1,30 @@
-const domain = "gmail.com";
-// const zinzin = "zimprobagnais";
-const zinzin = "janmarc.boutaud"
-const sep = "@";
+const myDomain = "gmail.com";
+const myZinzin = "zimprobagnais"
+const mySep = "@";
+
+console.log("Hello World");
 
 
 //=== START - FORM DECLARE ===//    
 
 (function() {
     let form = document.getElementById('contactForm');
+    let btonSend = document.querySelector("#postMsg")
 
-    //quand submit sera cliqué
-    form.addEventListener('submit', function(event) {
+    //When the button [Envoyer] is clicked
+    btonSend.addEventListener('click', function(event) {
         
         // init variables for mail
         console.log("start CONTROLS");
-        const CR = "\n";
+        let allOK = true;
+        const CR = "  ;  ";
         const myDate = new Date();
-        let message ="Message du site WEB Les Z'IMPROBAGNAIS" + CR;
-        message += "envoyé le "+ myDate.toLocaleString('fr-FR') + CR + CR;
+        let message = "date : "+ myDate.toLocaleString('fr-FR') + CR;
         
         // store + scan each data from the Form 
         let tt=Array.from(form.elements).forEach((input) => {            
              
-            if (input.type !== "submit") { //on ne checke pas bouton 
+            if (input.type !== "button") { //on ne checke pas bouton 
 
                 console.log("=================");
                 console.log("CHECK " + input.name);
@@ -31,8 +33,9 @@ const sep = "@";
                 //if invalid entry (return was false)
                 if (!validateFields(input)) {
                     console.log(' PB !');
-                    event.preventDefault();
-                    event.stopPropagation();
+                    allOK = false;
+                    //event.preventDefault();
+                    //event.stopPropagation();
                     
                     input.classList.remove("is-valid");
 
@@ -45,8 +48,8 @@ const sep = "@";
                 else {
                     // prepare data for email content ----------------
                     console.log (' OK ');
-                    message += input.name +" : " + CR ;
-                    message += removeTags(input.value)  + CR + CR ;
+                    message += input.name +" : " 
+                    message += removeTags(input.value)  + CR;
 
                     //hide error msg 
                     input.nextElementSibling.style.display = 'none';
@@ -56,8 +59,10 @@ const sep = "@";
             }
         });
         // if OK, send msg
-        console.log ("Tous tests ok !");        
-        sendMail(domain, sep, zinzin, message)
+        if (allOK) {
+            console.log ("Tous tests ok !");        
+            sendMail(myDomain, mySep, myZinzin, message)
+        }
 
     }, false)
 })()
@@ -76,20 +81,17 @@ function validateFields(input) {
         return (
             //champ obligatoire renseigné ?
             validateRequired(input)
-            //longueur champ ok ?     
-            && validateLength(input, 2, 20)
-            //format saisie ok ?
-            && checkFormat(input, "^[A-Za-z]+$")
+             //format saisie ok ?
+            && checkFormat(input, "^([A-Za-z ,.'-]){2,35}$")
             )
         }
-
+        
     case "lastName" :{
         return (
             validateRequired(input)
-            && validateLength(input, 2, 20)
-            && checkFormat(input, "^[A-Za-z]+$")
+            && checkFormat(input, "^([A-Za-z ,.'-]){2,35}$")
             )
-        }
+    }
         
     case "email" :{
         return (
@@ -107,7 +109,11 @@ function validateFields(input) {
     }
     
     case "message" :{
-        return(true)
+        return (
+            validateRequired(input)
+            //longueur champ ok ?     
+            && validateLength(input, 2, 500)
+            )
     }
 
     // case "address" :{
@@ -203,13 +209,16 @@ function removeTags(str) {
 
 
 // ----- FUNCTION SEND A MAIL -----
-function sendMail(myDomain, mySep, myZinzin, myMsg){
+function sendMail(domain, sep, zinzin, myMsg){
     console.log("SEND EMAIL")
+    console.log(zinzin)
     console.log (myMsg)
 
-    
+    let btonSend = document.createElement("a")
+    const mel = zinzin+sep+domain
+    console.log("mel: "+mel)
+    // btonSend.enctype = "multipart/form-data"
+    btonSend.href = "mailto:" + mel + "?subject=Message depuis le site les ZIMPROBAGNAIS" + "&body=" + myMsg 
+    btonSend.click()
 }
 
-
-
-//> var name = "dupont" ; var domain = "spam.com" ; var subject = "subject=Anti spam" ; document.write('<a href="mailto:' + name + '@' + domain + ' ?' + subject + '">') ; document.write(name + '@' + domain + 

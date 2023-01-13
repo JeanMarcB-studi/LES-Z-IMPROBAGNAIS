@@ -16,7 +16,7 @@
 <body class="bd-gray-700">
   
   <!-- ---------------------- H  E  A  D  E  R ---------------------- -->
-  <div class="container-fluid p-0 position-relative">
+  <header class="container-fluid p-0 position-relative">
     <!-- HEADER IMAGE ON STAGE -->
     <div class="row">
       <img class="img-fluid mx-0 " src="IMG/PhotoHead.JPG" alt="???" srcset=""> 
@@ -38,10 +38,10 @@
       </h1>       
     </div>
   </div>
-</div>
+</header>
 
 <!-- NAVIGATION BAR -->
-<div class="navbar navbar-expand-sm navbar-dark ">
+<nav class="navbar navbar-expand-sm navbar-dark ">
   <div class="container-fluid">
     
     <!-- B U T T O N  on MOBILE -->
@@ -76,20 +76,23 @@
       </div>
     </nav>
   </div>
-</div>
+</nav>
 <!-- ---------------------- END  H  E  A  D  E  R ----------------- -->
 
+<!-- -----------------------   M A I N  CONTENT   ----------------  -->
+<main>
+
 <!-- PRESENT CONTACT PAGE-->
-<div class="container-md myWidth my-0">
-  <div class="bg-gradient p-3 rounded-2">
+<article class="container-md myWidth my-0">
+  <div class="bg-gradient px-3 rounded-2">
     Cher visiteur, <br> une question, une idée, une remarque ou bien une proposition de spectacle ? <br> Si vous souhaitez nous contacter, ce formulaire est à votre disposition !
   </div>
-  <h2 class="myYellow text-center">Pour nous contacter :</h2>
-</div>
+  <h2 class="myYellow text-center mt-4">Pour nous contacter :</h2>
+</article>
 
 <!-- ----------------- FORMULAIRE DE CONTACT---------------- -->
 
-<div class="container d-flex flex-column min-vh-75 justify-content-center align-items-center bd-gray-800 mx-auto my-3 border rounded-1">
+<article class="container d-flex flex-column min-vh-75 justify-content-center align-items-center bd-gray-800 mx-auto my-3 border rounded-1">
   
   <form class="row g-3 needs-validation" id="contactForm" novalidate>
     
@@ -137,7 +140,10 @@
     
     <button type="button" class="btn btn-bd-accent w-25 mb-3 ms-2" id="postMsg">Envoyer</button>
   </form>
-</div>
+</article>
+
+</main>
+<!-- ---------------------  end  M A I N  CONTENT   ---------------  -->
 
 <footer>
  <div class="text-center mb-4">
@@ -159,7 +165,11 @@
     </a>
   </div>
 </div>
-  
+
+  <!-- OUR POLICY -->
+  <div class="container-md my-3 text-center">
+    <a href="politique.html" target="_blank">Politique de confidentialité</a>
+  </div>
 
 </footer>
 

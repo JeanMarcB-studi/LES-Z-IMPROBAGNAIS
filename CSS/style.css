@@ -4,6 +4,25 @@
 /* BOOTSTRAP ICONS FOR CONTACT */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css");
 
+.myTitle{
+  font-family: 'Shadows Into Light Two', cursive;
+  font-size: 9VW;
+  word-wrap: break-word;
+  white-space: normal;
+  text-shadow: -4px -3px 6px rgba(255, 242, 0, 0.7);
+}
+
+h1{
+  color: rgb(255, 190, 0);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+a{
+  color:  rgb(223, 223, 132);
+}
+a:hover{
+  color:chartreuse;
+}
+
 /* ANIMATION */
 @keyframes Turn{
   /* 0% {transform : rotate(1deg)}; */
@@ -53,13 +72,13 @@
 }
 
 .myStickers{
-  max-width: 300px;
+  max-width: 350px;
 }
 .myInnerImg {
   transition: 0.3s;
 }
 .myInnerImg:hover {
-  transform: scale(1.1);
+  transform: scale(1.25);
 }
 
 
@@ -71,18 +90,12 @@
     height: 60px;
     width: 60px;
     border: 2px solid orange;
-
+    box-shadow: 0 0 5px rgba(255, 255, 255,0.92);
 }
 .myVertical{
   bottom: 10%; 
   left:10px;
   color:white;
-}
-.myH1{
-  font-family: 'Shadows Into Light Two', cursive;
-  font-size: 9VW;
-  word-wrap: break-word;
-  white-space: normal;
 }
 .myWidth{
   max-width: 95%;
@@ -102,7 +115,7 @@
     left:10px;
     color:white;
   }
-  .myH1{
+  .myTitle{
     font-size: 7VW;
     word-wrap: normal;
     white-space: nowrap;
@@ -126,7 +139,7 @@
     left:15px;
     color:white;
   }
-  .myH1{
+  .myTitle{
     font-size: 7VW;
   }
   .myWidth{

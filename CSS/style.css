@@ -150,6 +150,12 @@ a:hover{
     max-width: 500px;
   }
 }
+
 body{
   padding: 0;
+  background-image: url("../IMG/logoZinzins.jpg");
+  background-origin: padding-box;
+  background-repeat: no-repeat;
+  /* background-clip: content-box; */
+  background-size: 3em;
 }

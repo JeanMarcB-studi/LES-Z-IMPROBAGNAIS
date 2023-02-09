@@ -1,3 +1,7 @@
+
+<!-- PHP FUNCTIONS -->
+<?php require_once "PHP/biblio.php"; ?>
+
 <!DOCTYPE html>
 <html lang="fr">
   
@@ -101,109 +105,13 @@
     </div>
   </article>
 
+ 
   <!-- PICTURES GALERY 16 DEC 2022 -->
-  <article class="container-fluid container-xl mb-5">
-    <div class="row row-cols-1 row-cols-lg-4 justify-content-center g-0">      
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_0917.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0917.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_0950.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0950.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_0982.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0982.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_0984.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0984.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1020.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1020.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1044.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1044.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1068.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1068.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1100.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1100.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1109.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1109.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1129.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1129.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1136-2.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1136-2.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div>
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1159.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1159.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1055B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1055B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1060B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1060B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1064B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1064B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1103B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1103B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1120B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1120B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1124B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1124B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1178B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1178B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
-      <div class="col m-2 myStickers myInnerImg">
-        <a href="IMG/2022-12-16/2022.12.16-_MG_1223B.jpg" target="_blank" rel="noopener noreferrer">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1223B.jpg" class="w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </a>
-      </div> 
+  <article class="container-xxl mb-5 p-sm-3 g-0">
+    <div class="row row-cols-xl-4 justify-content-center w-100 g-0 p-0">      
+      
+    <!-- GALERY FROM PHP -->
+    <?= imagesGalery('2022-12-16') ?>
               
     </div>
   </article>

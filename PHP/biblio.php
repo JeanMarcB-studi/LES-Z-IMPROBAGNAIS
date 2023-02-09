@@ -26,5 +26,18 @@ function imagesCarousel(){
     return($li);
 }
 
-
-
+//SHOW IMAGES FOR GALERY
+function imagesGalery($dir){
+$imgs = scandir ("./IMG/$dir");
+$li = '';
+  foreach ($imgs as $img){
+    if (!is_dir($img) && ($img !='POSTER.jpg')){
+      $li.= "\t <div class='col-12 col-sm-6 col-xl-3 p-1 myStickers myInnerImg'> \n";
+      $li.= "\t\t <a href='IMG/$dir/$img' target='_blank' rel='noopener noreferrer'> \n";
+      $li.= "\t\t\t <img src='IMG/$dir/$img' class='w-100' alt='photo spectacle théâtre Jean-Marc Boutaud'> \n";
+      $li.= "\t\t </a> \n";
+      $li.= "\t </div> \n";
+    }
+  }
+  return($li);
+}

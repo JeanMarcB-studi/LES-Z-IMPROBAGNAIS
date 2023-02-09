@@ -73,7 +73,7 @@ a:hover{
 }
 
 .myStickers{
-  max-width: 350px;
+  /* max-width: 450px; */
 }
 .myInnerImg {
   transition: 0.3s;

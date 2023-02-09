@@ -19,6 +19,9 @@
   
 <body class="bd-gray-700">
 
+<!-- PHP FUNCTIONS -->
+<?php require_once "PHP/biblio.php"; ?>
+
 <!-- ---------------------- H  E  A  D  E  R ---------------------- -->
 <header class="container-fluid p-0 position-relative m-0">
   <!-- HEADER IMAGE ON STAGE -->
@@ -102,26 +105,10 @@
   <article class="container mt-5 myWidth">
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
-        <!-- MY PICTURES -->
-        <div class="carousel-item active">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0917.jpg" class="d-block w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </div>
-        <div class="carousel-item">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0950.jpg" class="d-block w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </div>
-        <div class="carousel-item">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0982.jpg" class="d-block w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </div>
-        <div class="carousel-item">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_0984.jpg" class="d-block w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </div>
-        <div class="carousel-item">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1020.jpg" class="d-block w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </div>
-        <div class="carousel-item">
-          <img src="IMG/2022-12-16/2022.12.16-_MG_1136-2.jpg" class="d-block w-100" alt="photo spectacle théâtre Jean-Marc Boutaud">
-        </div>
         
+        <!-- GET IMAGES -->
+        <?= imagesCarousel() ?>
+
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

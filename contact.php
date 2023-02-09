@@ -57,13 +57,13 @@
         <ul class="navbar-nav mb-2 mb-lg-0  bg-dark">
           <!-- ITEM 1 -->
           <li class="nav-item">
-            <a class="nav-link p-2" id="Accueil" href="index.html">
+            <a class="nav-link p-2" id="Accueil" href="index.php">
               Accueil
             </a>
           </li>
           <!-- ITEM 2 -->
           <li class="nav-item">
-            <a class="nav-link p-2" id="Spectacle" href="spectacles.html">
+            <a class="nav-link p-2" id="Spectacle" href="spectacles.php">
               Spectacles
             </a>
           </li>

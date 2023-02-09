@@ -68,13 +68,13 @@
           </li>
           <!-- ITEM 2 -->
           <li class="nav-item">
-            <a class="nav-link p-2" id="Spectacle" href="spectacles.html">
+            <a class="nav-link p-2" id="Spectacle" href="spectacles.php">
               Spectacles
             </a>
           </li>
           <!-- ITEM 3 -->
           <li class="nav-item">
-            <a class="nav-link p-2" id="Contact" href="contact.html">
+            <a class="nav-link p-2" id="Contact" href="contact.php">
               Contact
             </a>
           </li>
@@ -139,7 +139,7 @@
 <!-- CONTACT shortcut -->
 <div class="container-md my-3 text-center">
   <i class="bi bi-envelope"></i>
-  <a href="contact.html" >Nous contacter</a>
+  <a href="contact.php" >Nous contacter</a>
 </div>
 
 <!-- copyright -->

@@ -2,7 +2,7 @@ name: 🚀 Deploy ZIMPROBAGNAIS PROD on push
 
 on: 
   push:
-   branches: 'prod'
+   branches: 'main'
 
 jobs:
   build:

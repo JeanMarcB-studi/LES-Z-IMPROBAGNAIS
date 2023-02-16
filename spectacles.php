@@ -96,6 +96,14 @@
     </div>
   </article>
 
+  <!-- PROCHAINES AFFICHES -->
+  <?= imagesPosters(); ?>
+
+  <!-- LES PHOTOS SOUVENIR----------------------------- -->
+  <article class="container-md myWidth my-0">
+    <h2 class ="h1">Des photos souvenir :</h2>
+  </article>
+
   <!-- AFFICHE OF 16 DEC 2022 -->
   <article class="container-md my-5 w-75 text-md-center">
     <h2 class="myYellow">16 Décembre 2022</h2>

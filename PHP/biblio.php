@@ -86,10 +86,10 @@ function imagesPosters(){
         $myPoster = PATH_POSTERS.$img;
         $myDate = cvDateFr(substr($img , 0, $t));
         $li .= "
-        <article class='container-md my-5 w-75 text-md-center'>
-          <h2 class='myYellow'>$myDate</h2>
-          <h3>Aubagne - Cercle de l'Harmonie</h3>
-          <div class='container-md my-4 myWidthSmall'>
+        <article class='container-fluid my-5 w-100 text-center g-0'>
+          <h2 class='myYellow w-75 mx-auto'>$myDate</h2>
+          <h3 class='w-75 mx-auto'>Aubagne - Cercle de l'Harmonie</h3>
+          <div class='container-md my-4 myWidthSmall g-0'>
             <img src='$myPoster' alt='Affiche du prochain spectacle' class ='w-100' srcset=''>
           </div>
         </article>
@@ -100,3 +100,14 @@ function imagesPosters(){
   }
   return($li);
 }
+/*
+ <!-- AFFICHE OF 16 DEC 2022 -->
+  <article class="container-fluid my-5 w-100 text-center g-0">
+    <h2 class="myYellow w-75 mx-auto">16 Décembre 2022</h2>
+    <h3 class="w-75 mx-auto">Aubagne - Cercle de l'Harmonie</h3>
+    
+    <div class="container-md my-4 myWidthSmall g-0">
+      <img src="IMG/Affiche-2022-12-16.jpg" alt="notre affiche" class ="w-100" srcset="">
+    </div>
+  </article>
+  */

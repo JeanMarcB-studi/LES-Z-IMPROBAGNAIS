@@ -103,6 +103,7 @@ a:hover{
 }
 .myWidthSmall{
   max-width: 95%;
+  max-width: 500px;
 }
 
 /* RESPONSIVITY : WIDTH VALUES from 350px to 849px LARGE */

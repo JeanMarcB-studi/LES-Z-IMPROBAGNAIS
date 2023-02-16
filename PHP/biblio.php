@@ -6,7 +6,7 @@ declare (strict_types = 1); // oblige à respecter type/ funct
 const BR = '<br>';
 const PATH_CAROUSEL = './IMG/carroussel/';
 const PATH_POSTERS = './IMG/posters/';
-const MOIS = ["ERR","Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+// const MOIS = ["ERR","Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
 
 // CONVERT 'YYYY-MM-DD' into French Date
 function cvDateFr(string $dateEN): string
@@ -14,13 +14,18 @@ function cvDateFr(string $dateEN): string
   $t1 = strpos($dateEN, "-");
   if ($t1)
   {
-    $t2 = strpos($dateEN, "-", $t1 + 1);
-    $t3 = strlen($dateEN);
-    $d = (int)substr($dateEN, $t2 + 1, $t3 -$t2+1);
-    $m = (int)substr($dateEN, $t1 + 1, $t2 - $t1);
-    $a = substr($dateEN, 0, $t1);
-    $dateFR = "$d ".MOIS[$m]." $a";
-    return $dateFR;
+    // $t2 = strpos($dateEN, "-", $t1 + 1);
+    // $t3 = strlen($dateEN);
+    // $d = (int)substr($dateEN, $t2 + 1, $t3 -$t2+1);
+    // $m = (int)substr($dateEN, $t1 + 1, $t2 - $t1);
+    // $a = substr($dateEN, 0, $t1);
+    // $dateFR = "$d ".MOIS[$m]." $a";
+    
+    $dateFR = new IntlDateFormatter('fr_FR',IntlDateFormatter::NONE,IntlDateFormatter::NONE);
+    $dateFR->setPattern('EEEE dd MMMM YYYY');
+    return $dateFR->format(new DateTime($dateEN));
+
+    // return $dateFR;
   }
   return '';
 }
@@ -82,16 +87,28 @@ function imagesPosters(){
           <h2 class ='h1'>Nouveau, à l'affiche :</h2>
         </article>
         ";
-
+        
+        //prepare Dates
         $myPoster = PATH_POSTERS.$img;
-        $myDate = cvDateFr(substr($img , 0, $t));
+        $enDate = substr($img , 0, $t);
+        $myDate = cvDateFr($enDate);
+        
+        // calculate Nb days to wait
+        $today = new DateTime();
+        $future = new DateTime($enDate);
+        $diff = $future->diff($today)->format("%a");
+        if ($diff>0) {
+          $wait ="<div class='w-75 mx-auto'>Encore $diff jours à patienter, venez nombreux !</div>";
+        }
+        
         $li .= "
         <article class='container-fluid my-5 w-100 text-center g-0'>
           <h2 class='myYellow w-75 mx-auto'>$myDate</h2>
           <h3 class='w-75 mx-auto'>Aubagne - Cercle de l'Harmonie</h3>
           <div class='container-md my-4 myWidthSmall g-0'>
-            <img src='$myPoster' alt='Affiche du prochain spectacle' class ='w-100' srcset=''>
+            <img src='$myPoster' alt='Affiche du prochain spectacle le $myDate' class ='w-100' srcset=''>
           </div>
+          $wait
         </article>
         <br>
         ";

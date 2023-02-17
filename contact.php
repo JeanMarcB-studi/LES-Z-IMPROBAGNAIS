@@ -10,8 +10,8 @@
   <!-- myCSS -->
   <link rel="stylesheet" href="CSS/style.css">
   
-  <title>les Z'improbagnais : pour nous contacter</title>
-  <meta name="description" content="Une question ou une proposition de spectacle : ici toutes les informations nécessaires pour contacter la troupe d'improvisation d'Aubagne.">
+  <title>les Zimprobagnais : pour nous contacter</title>
+  <meta name="description" content="Une question ou proposition de spectacle : ici toutes les informations pour contacter les z'improbagnais troupe d'improvisation à Aubagne.">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
 

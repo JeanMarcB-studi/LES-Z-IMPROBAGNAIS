@@ -14,8 +14,8 @@
   <!-- myCSS -->
   <link rel="stylesheet" href="CSS/style.css">
   
-  <title>les Z'improbagnais : nos spectacles sur Aubagne</title>
-  <meta name="description" content="Troupe d'amateurs de théâtre d'Improvisation : pour tout savoir sur nos prochains spectacles autour d'Aubagne, cette page est faite pour vous.">
+  <title>les Zimprobagnais : nos spectacles de théâtre sur Aubagne</title>
+  <meta name="description" content="Troupe d'amateurs de théâtre d'improvisation : pour tout savoir sur nos prochains spectacles autour d'Aubagne, cette page est faite pour vous.">
   <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 </head>
   

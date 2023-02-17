@@ -121,7 +121,7 @@
     </div>
   </article>
   
-  <!-- AFFICHE 16 DEC 2022 -->
+  AFFICHE 16 DEC 2022
   <article class="container-md my-5 w-70">
     <h2 class="text-center ">Notre dernier spectacle :</h2>
     <div class="my-4 mx-auto myWidthSmall">

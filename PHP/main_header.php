@@ -8,7 +8,7 @@
   <!-- bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
-  <link rel="stylesheet" href="_bootstrap/bootstrap.css">
+  <!-- <link rel="stylesheet" href="_bootstrap/bootstrap.css"> -->
   
   <!-- myCSS -->
   <link rel="stylesheet" href="CSS/style.css">
@@ -64,13 +64,13 @@
         <ul class="navbar-nav mb-2 mb-lg-0  bg-dark">
           <!-- ITEM 1 -->
           <li class="nav-item">
-            <a class="nav-link p-2" id="Accueil" href="#">
+            <a class="nav-link p-2" id="Accueil" href="index.php">
               Accueil
             </a>
           </li>
           <!-- ITEM 2 -->
           <li class="nav-item">
-            <a class="nav-link p-2" id="Spectacle" href="spectacles.php">
+            <a class="nav-link p-2" id="Spectacles" href="spectacles.php">
               Spectacles
             </a>
           </li>

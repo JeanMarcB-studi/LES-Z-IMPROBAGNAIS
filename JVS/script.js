@@ -1,6 +1,6 @@
 
 
-
-const currentMenu = document.querySelector(currentPage)
-currentMenu.addClass('myActive')
-console.log("current: "+currentPage)
+//MARQUER LA PAGE EN COURS
+const currentMenu = document.querySelector("#"+currentPage)
+currentMenu.classList.add('myActive')
+currentMenu.href ="#"

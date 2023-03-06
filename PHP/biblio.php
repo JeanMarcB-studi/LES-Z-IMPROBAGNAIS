@@ -1,6 +1,6 @@
 <?php
 
-declare (strict_types = 1); // oblige à respecter type/ funct
+//declare (strict_types = 1); // oblige à respecter type/ funct
 
 // CONSTANT
 const BR = '<br>';

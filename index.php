@@ -1,9 +1,12 @@
 <?php 
-$title = "les Z'improbagnais : théâtre improvisation à Aubagne";
-$descr = "Nous sommes une troupe d'amateurs de théâtre d'Improvisation basée sur Aubagne. Notre ambition : partager nos meilleurs délires avec vous.";
-$current = "Accueil";
-require 'main_header.php';
- ?>
+  $current = "Accueil";
+  $title = "les Z'improbagnais : théâtre improvisation à Aubagne";
+  $descr = "Nous sommes une troupe d'amateurs de théâtre d'Improvisation basée sur Aubagne. Notre ambition : partager nos meilleurs délires avec vous.";
+  
+  require_once 'PHP/main_header.php';
+  require_once "PHP/biblio.php"; 
+?>
+
 
 <!-- -----------------------   M A I N  CONTENT   ----------------  -->
 <main>
@@ -55,31 +58,19 @@ require 'main_header.php';
 <!-- -----------------------        FOOTER        ----------------  -->
 <footer>
 
-<!-- CONTACT shortcut -->
-<div class="container-md my-3 text-center">
-  <i class="bi bi-envelope"></i>
-  <a href="contact.php" >Nous contacter</a>
-</div>
+  <!-- CONTACT shortcut -->
+  <div class="container-md my-3 text-center">
+    <i class="bi bi-envelope"></i>
+    <a href="contact.php" >Nous contacter</a>
+  </div>
 
-<!-- copyright -->
-<div class="container-md my-3 text-center">
-  <i class="bi bi-c-circle"></i>
-  2023 - LES Z'IMPROBAGNAIS
-</div>
+  <!-- copyright -->
+  <div class="container-md my-3 text-center">
+    <i class="bi bi-c-circle"></i>
+    2023 - LES Z'IMPROBAGNAIS
+  </div>
 
 </footer>
 <!-- -----------------------    end FOOTER        ----------------  -->
 
-
-
-
-<!-- ........................ THIS IS THE END :o) ............................... -->
-
-<?php echo '<script>', "let currentPage = '$current'",'</script>'; ?>
-<!-- <script src="JVS/script.js"></script> -->
-
-<!-- bootstrap -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  
-</body>
-</html>
+<?php require_once "PHP/main_footer.php"; ?>
